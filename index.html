@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" id="theme1" disabled>
+    <link rel="stylesheet" href="style1.css" id="theme2" disabled>
+    <link rel="stylesheet" href="style2.css" id="theme3" disabled>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="MainCont">
+        <div class="keyboardCont">
+            <button class="Regbutton" id="b7">7</button>
+            <button class="Regbutton" id="b8">8</button>
+            <button class="Regbutton" id="b9">9</button>
+            <button class="Delbutton">DEL</button>
+            <button class="Regbutton" id="b4">4</button>
+            <button class="Regbutton" id="b5">5</button>
+            <button class="Regbutton" id="b6">6</button>
+            <button class="operator" id="addb">+</button>
+            <button class="Regbutton" id="b1">1</button>
+            <button class="Regbutton" id="b2">2</button>
+            <button class="Regbutton" id="b3">3</button>
+            <button class="operator" id="minb">-</button>
+            <button class="dotbutton" id="dotb">.</button>
+            <button class="Zero" id="b0">0</button>
+            <button class="operator" id="divb">/</button>
+            <button class="operator" id="multb">x</button>
+            <button class="Resetbutton">RESET</button>
+            <button class="Equalbutton">=</button>
+        </div>
+        <div class="DisplayCont">
+            <div class="sliderdiv">
+            <input type="range" min="1" max="3" step="1" value="1" class="slider" id="themeSlider">
+            </div>
+            <p class="lastNum" id="lastnum">0</p>
+            <p class="result" id="res">0</p>
+            <p class="calc">calc</p>
+            <p class="theme">THEME</p>
+            <p class="themecount">1 2 3</p>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
+
