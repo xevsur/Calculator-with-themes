@@ -254,9 +254,9 @@ slider.addEventListener("input", () => {
       root.style.setProperty("--shadow-color", "#881C9E");
       root.style.setProperty("--regButBg-color", "#331C4D");
       root.style.setProperty("--regBut-color", "#FFE53D");
-      root.style.setProperty("--keyBoardbg-color", "#242D44");
+      root.style.setProperty("--keyBoardbg-color", "#1E0936");
       root.style.setProperty("--sliderThumb-color", "#00DED0");
-      root.style.setProperty("--sliderBg-color", "#242D44");
+      root.style.setProperty("--sliderBg-color", "#1E0936");
       root.style.setProperty("--ResDelbg-color", "#56077C");
       root.style.setProperty("--ResDelShadow-color", "#BE15F4");
       root.style.setProperty("--EqualBg-color", "#00DED0");
