@@ -211,20 +211,62 @@ Resetbutton.addEventListener("click", function(){
 });
 
 
-function updateStyles(themeValue) {
-  document.getElementById("theme1").disabled = true;
-  document.getElementById("theme2").disabled = true;
-  document.getElementById("theme3").disabled = true;
+const slider = document.getElementById("themeSlider");
+const root = document.documentElement;
 
-  document.getElementById(`theme${themeValue}`).disabled = false;
-}
-
-updateStyles(1);
-const themeSlider = document.getElementById("themeSlider");
-
-themeSlider.addEventListener("input", function () {
-  const themeValue = themeSlider.value;
-  updateStyles(themeValue);
+slider.addEventListener("input", () => {
+  switch (slider.value) {
+    case "1":
+      root.style.setProperty("--bg-color", "#3A4663");
+      root.style.setProperty("--text-color", "hsl(0, 0%, 100%)");
+      root.style.setProperty("--shadow-color", "#B3A497");
+      root.style.setProperty("--regButBg-color", "hsl(30, 25%, 89%)");
+      root.style.setProperty("--regBut-color", "hsl(221, 14%, 31%)");
+      root.style.setProperty("--keyBoardbg-color", "#242D44");
+      root.style.setProperty("--sliderThumb-color", "#D03F2F");
+      root.style.setProperty("--sliderBg-color", "#242D44");
+      root.style.setProperty("--ResDelbg-color", "#647198");
+      root.style.setProperty("--ResDelShadow-color", "#414E73");
+      root.style.setProperty("--EqualBg-color", "#D03F2F");
+      root.style.setProperty("--EqualShadow-color", "#93261A");
+      root.style.setProperty("--displayBg-color", "#181F33");
+      root.style.setProperty("--upperText-color", "white");
+      break;
+    case "2":
+      root.style.setProperty("--bg-color", "#E6E6E6");
+      root.style.setProperty("--text-color", "hsl(0, 0%, 100%)");
+      root.style.setProperty("--shadow-color", "#A79E91");
+      root.style.setProperty("--regButBg-color", "#E5E4E1");
+      root.style.setProperty("--regBut-color", "#36362C");
+      root.style.setProperty("--keyBoardbg-color", "#D2CDCD");
+      root.style.setProperty("--sliderThumb-color", "#C85402");
+      root.style.setProperty("--sliderBg-color", "#D2CDCD");
+      root.style.setProperty("--ResDelbg-color", "#378187");
+      root.style.setProperty("--ResDelShadow-color", "#1B6066");
+      root.style.setProperty("--EqualBg-color", "#C85402");
+      root.style.setProperty("--EqualShadow-color", "#873901");
+      root.style.setProperty("--displayBg-color", "#EEEEEE");
+      root.style.setProperty("--upperText-color", "#36362C");
+      break;
+    case "3":
+      root.style.setProperty("--bg-color", "#17062A");
+      root.style.setProperty("--text-color", "#FFE53D");
+      root.style.setProperty("--shadow-color", "#881C9E");
+      root.style.setProperty("--regButBg-color", "#331C4D");
+      root.style.setProperty("--regBut-color", "#FFE53D");
+      root.style.setProperty("--keyBoardbg-color", "#242D44");
+      root.style.setProperty("--sliderThumb-color", "#00DED0");
+      root.style.setProperty("--sliderBg-color", "#242D44");
+      root.style.setProperty("--ResDelbg-color", "#56077C");
+      root.style.setProperty("--ResDelShadow-color", "#BE15F4");
+      root.style.setProperty("--EqualBg-color", "#00DED0");
+      root.style.setProperty("--EqualShadow-color", "#6CF9F1");
+      root.style.setProperty("--displayBg-color", "#1E0936");
+      root.style.setProperty("--upperText-color", "#FFE53D");
+      break;
+    default:
+      break;
+  }
 });
 
 //Hope you like it
