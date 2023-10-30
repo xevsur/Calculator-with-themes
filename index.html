@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images\favicon-32x32.png" type="icon">
     <title>Calculator</title>
 </head>
 <body>
+    
     <div class="MainCont">
+        <div class="themecount"><div>1</div><div>2</div><div> 3</div></div>
+        <div class="upperText">
+            <p class="calc">calc</p>
+            <p class="theme">THEME</p>
+            <div class="sliderdiv">
+            <input type="range" min="1" max="3" step="1" value="1" class="slider" id="themeSlider">
+            </div>
+        </div>
+        <div class="DisplayCont">
+            <p class="lastNum" id="lastnum">0</p>
+            <p class="result" id="res">0</p>
+
+        </div>
         <div class="keyboardCont">
+            <div class="keyboard">
             <button class="Regbutton" id="b7">7</button>
             <button class="Regbutton" id="b8">8</button>
             <button class="Regbutton" id="b9">9</button>
@@ -25,19 +41,13 @@
             <button class="Zero" id="b0">0</button>
             <button class="operator" id="divb">/</button>
             <button class="operator" id="multb">x</button>
-            <button class="Resetbutton">RESET</button>
-            <button class="Equalbutton">=</button>
-        </div>
-        <div class="DisplayCont">
-            <div class="sliderdiv">
-            <input type="range" min="1" max="3" step="1" value="1" class="slider" id="themeSlider">
             </div>
-            <p class="lastNum" id="lastnum">0</p>
-            <p class="result" id="res">0</p>
-            <p class="calc">calc</p>
-            <p class="theme">THEME</p>
-            <p class="themecount">1 2 3</p>
+            <div class="BigKeys">
+                <button class="Resetbutton">RESET</button>
+                <button class="Equalbutton">=</button>
+            </div>
         </div>
+        
     </div>
     <script src="calc.js"></script>
 </body>

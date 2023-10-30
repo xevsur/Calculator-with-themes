@@ -15,11 +15,13 @@
     --upperText-color: white;
 }
 body{
-    margin: 0px;
     background-color: var(--bg-color);
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 98%;
+    min-width: 320px;
 }
 
 @font-face {
@@ -30,41 +32,59 @@ body{
 
 
 .MainCont{
-    vertical-align: auto;
-    position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     font-size: 24px;
     background-color: var(--bg-color);
     font-family: 'spartan';
-    height: 100vh;
-    width: 25rem;
-    max-width: 100%;
-    
+    max-width: fit-content;
+    padding-right: 4px;
+    padding-left: 4px;
 }
 
 .keyboardCont{
-    position: absolute;
-    transform: translateY(90px);
-    width: 20.4375rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
     height: 26.25rem;
     flex-shrink: 0;
     border-radius: 0.625rem;
     background: var(--keyBoardbg-color);
-    display: grid;
-    gap: 0.1rem;
-    grid-template-columns: repeat(4, 4.5rem);
+    display: flex;
     align-items: center;
     justify-items: center;
+    flex-direction: column;
     font-family: inherit;
     font-size: 40px;
+}
+.BigKeys{
+    display: grid;
+    grid-template-columns: repeat(2, 4.7rem);
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 4.7rem;
+    padding-top: 0.5rem;
+}
+.keyboard{
+    padding-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 4.7rem);
+    grid-template-rows: repeat(4, 5rem);
+    align-items: center;
+    justify-items: center;
+}
+.upperText{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
 .Regbutton{
-    margin-left: 2.3rem;
-    transform: translateY(10px);
     border-radius: 0.7125rem;
     background: var(--regButBg-color);
     box-shadow: 0px -4px 0px 0px var(--shadow-color) inset;
@@ -87,15 +107,16 @@ body{
 }
 
 .sliderdiv{
-    margin: 0;
+    display: flex;
     width: 4rem;
-    transform: translateY(-1.9rem) translateX(16.5rem);
 }
 
 .slider {
+    display: flex;
+    align-items: center;
     -webkit-appearance: none;
     appearance: none;
-    width: 3.7rem;
+    width: 60px;
     height: 1.4rem;
     border-radius: 10px;
     background: var(--sliderBg-color);
@@ -104,7 +125,6 @@ body{
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    transform: translateY(-1.5px);
     width: 0.9rem;
     height: 0.9rem;
     border-radius: 50%;
@@ -113,15 +133,14 @@ body{
 }
 
 .slider::-webkit-slider-runnable-track {
-    max-width: 90%;
-    transform: translateX(3px);
-    height: 10px;
+    height: 100%;
     background: var(--sliderBg-color);
     border-radius: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .Resetbutton{
-    transform: translateX(56px) translateY(-0.2rem);
     font-family: 'spartan';
     font-size: 2rem;
     font-weight: 700;
@@ -140,7 +159,6 @@ body{
 }
 
 .Equalbutton {
-    transform: translateX(130px) translateY(-0.3rem);
     font-family: 'spartan';
     font-size: 2rem;
     font-weight: 700;
@@ -159,7 +177,6 @@ body{
 }
 
 .Delbutton{
-    transform: translateX(17px) translateY(10px);
     font-family: 'spartan';
     font-size: 1.5rem;
     font-weight: 700;
@@ -178,19 +195,23 @@ body{
 }
 
 .DisplayCont{
-    position: absolute;
-    transform: translateY(-185px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0;
     width: 20.4375rem;
     height: 6rem;
     flex-shrink: 0;
     border-radius: 0.625rem;
     background: var(--displayBg-color);
     font-family: 'spartan';
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .result {
         margin: 0%;
-        transform: translateY(-0.4rem) translateX(-25px);
         color: var(--upperText-color);
         text-align: right;
         font-family: 'spartan';
@@ -199,11 +220,11 @@ body{
         font-weight: 700;
         line-height: normal;
         letter-spacing: -0.04169rem;
+        padding-right: 1rem;
 }
 
 .lastNum{
     margin: 0%;
-    transform: translateY(-0.8rem) translateX(-25px);
     color: gray;
     text-align: right;
     font-family: 'spartan';
@@ -212,57 +233,43 @@ body{
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.04169rem;
+    padding-right: 1rem;
 }
 
 
 .calc{
-    margin: 0;
-    width: 5rem;
-    margin: 0%;
     font-family: 'spartan';
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--upperText-color);
-    transform: translateY(-130px) translateX(-1px);
+    margin: 0;
+    flex-grow: 1;
 }
 
 .theme{
-    position: absolute;
     font-family: 'spartan';
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--upperText-color);
-    transform: translateY(-162px) translateX(210px);
+    padding-right: 1rem;
 }
 
 .themecount{
+    display: flex;
+    flex-direction: row;
+    width: 55px;
+    padding-right: 5px;
+    justify-content: space-between;
     margin: 0;
-    position: absolute;
     font-family: 'spartan';
     font-size: 1rem;
     font-weight: 500;
     color: var(--upperText-color);
-    transform: translateY(-173px) translateX(270px);
-    letter-spacing: 0.3rem;
+    align-self: flex-end;
 }
 
-.rangetheme{
-    height: 20px;
-    background: var(--bg-color);
-    border-radius: 13px;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    outline: none;
-    margin: 0px;
-    width: 64px;
-    margin-top: 10px;
-    padding: 0 3px 0 3px;
-    cursor: pointer;
-}
 
 .operator {
-    margin-left: 2.3rem;
-    transform: translateY(10px);
     border-radius: 0.7125rem;
     background: var(--regButBg-color);
     box-shadow: 0px -4px 0px 0px var(--shadow-color) inset;
@@ -285,8 +292,6 @@ body{
 }
 
 .dotbutton{
-    margin-left: 2.3rem;
-    transform: translateY(10px);
     border-radius: 0.7125rem;
     background: var(--regButBg-color);
     box-shadow: 0px -4px 0px 0px var(--shadow-color) inset;
@@ -309,8 +314,6 @@ body{
 }
 
 .Zero{
-    margin-left: 2.3rem;
-    transform: translateY(10px);
     border-radius: 0.7125rem;
     background: var(--regButBg-color);
     box-shadow: 0px -4px 0px 0px var(--shadow-color) inset;
@@ -336,65 +339,67 @@ body{
 
 @media (min-width: 900px){
 
+    body{
+        height: 98vh;
+        min-height: 860px;
+    }
     .keyboardCont{
-        transform: translateY(130px);
         width: 35rem;
         height: 33rem;
-        grid-row-gap: 1rem;
-        grid-column-gap: 4rem;
     }
-
+    .keyboard{
+        grid-template-columns: repeat(4, 8.5rem);
+        grid-template-rows: repeat(4, 6.2rem);
+    }
+    .BigKeys{
+        grid-template-columns: repeat(2);
+        grid-column-gap: 12.4rem;
+    }
     .Regbutton{
-        transform: translateX(1.4rem) translateY(0.5rem);
         position: relative;
-        width: 8rem;
+        width: 7rem;
         height: 4.6rem;
     }
 
     .Delbutton{
-        width: 8rem;
+        width: 7rem;
         height: 4.6rem;
-        transform: translateX(2.6rem)translateY(0.5rem);
     }
 
     .Resetbutton{
-        width: 16rem;
+        width: 15.5rem;
         height: 6rem;
-        transform: translateX(6.6rem) translateY(-0.5rem);
+        flex-grow: 1;
     }
 
     .Equalbutton{
-        width: 16rem;
+        width: 15.5rem;
         height: 6rem;
-        transform: translateX(15.5rem) translateY(-0.5rem);
+        flex-grow: 1;
     }
 
     .DisplayCont{
-        transform: translateY(-14rem);
         width: 35rem;
         height: 7rem;
     }
     
     .calc{
-        transform: translateY(-12rem);
         font-size: 4rem;
     }
 
     .theme{
         font-size: 1.2rem;
-        transform: translateX(24.5rem) translateY(-15rem);
     }
 
     .themecount{
         font-size: 1.5rem;
         font-weight: bold;
-        transform: translateX(29rem)translateY(-16rem);
-        letter-spacing: 0.7rem;
+        width: 94px;
+        padding-right: 0;
     }
 
     .result{
         font-size: 4rem;
-        transform: translateY(-0.7rem) translateX(-1.3rem);
     }
 
     .lastNum{
@@ -402,31 +407,27 @@ body{
     }
 
     .sliderdiv{
-        transform: translateX(28.6rem) translateY(-3.2rem)
+        flex-basis: 100px;
     }
 
     .slider{
         width: 6.2rem;
     }
     .slider::-webkit-slider-runnable-track{
-        transform: translateX(5px);
     }
 
     .operator{
-        transform: translateX(1.5rem) translateY(0.4rem);
-        width: 8rem;
+        width: 7rem;
         height: 4.6rem;
     }
 
     .dotbutton{
-        transform: translateX(1.5rem) translateY(0.4rem);
-        width: 8rem;
+        width: 7rem;
         height: 4.6rem;
     }
 
     .Zero{
-        transform: translateX(1.5rem) translateY(0.4rem);
-        width: 8rem;
+        width: 7rem;
         height: 4.6rem;
     }
 }
